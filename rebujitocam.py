@@ -49,10 +49,12 @@ def random_tweet():
 	date = int(time.strftime("%H%M"))
 	if date >= 1300 and date <= 1759:
         	file = open("/home/pi/Proyectos/rebujitocam/randomText/comida.txt","r")
-	if date >= 1800 and date <= 2059:
+	elif date >= 1800 and date <= 2059:
         	file = open("/home/pi/Proyectos/rebujitocam/randomText/tarde.txt","r")
-	if date >= 2100 and date <= 2359:
+	elif date >= 2100 and date <= 2359:
         	file = open("/home/pi/Proyectos/rebujitocam/randomText/cena.txt","r")
+	elif date >= 0 and date <= 101:
+		print("/home/pi/Proyectos/rebujitoCAM/randomText/madrugada.txt","r")
 	else:
 		file = open("/home/pi/Proyectos/tweetAndalucia/randomText/resto.txt","r")
 	for line in file.readlines():
